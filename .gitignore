@@ -1,0 +1,12 @@
+# OS
+.DS_Store
+*.swp
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+
+# Local doc build output (if a static site generator is added later)
+_site/
+.cache/
