@@ -1,26 +1,32 @@
-# 📄 Write a plain-English explainer: what is SEP-56 and why does it matter?
+# Write a plain-English explainer: what is SEP-56 and why does it matter?
 
 **Labels**: `documentation`, `good first issue`, `help wanted`
-**Complexity**: 🟢 Beginner — no coding required
 
-## Summary
-YieldRoutes' vault is one of the first implementations of the SEP-56 Tokenized Vault Standard on Stellar. Most users and contributors don't know what SEP-56 is or why the standard matters. A well-written explainer will attract contributors who care about Stellar DeFi standards.
+## Context
 
-## What needs to be done
-Create `docs/guides/sep56-explainer.md` covering:
+YieldRoutes implements SEP-56, Stellar's Tokenized Vault Standard — the Soroban equivalent of Ethereum's ERC-4626. The org README (`/.github/profile/README.md`, lines 93-94) mentions SEP-56 briefly but assumes the reader already understands what a tokenized vault standard is. There is no standalone document explaining SEP-56 from scratch. A new contributor or Stellar DeFi newcomer currently has no entry point.
 
-1. **What is a tokenized vault?** (analogy: like a savings account that gives you a receipt — the receipt is worth more over time as interest accrues)
-2. **What problem does SEP-56 solve?** (vaults without a standard are isolated — can't plug into other DeFi protocols)
-3. **How SEP-56 works** (deposit → get shares → shares appreciate → redeem shares → get back more than you put in)
-4. **YieldRoutes' implementation** (yrUSDC shares, auto-compounding, 6-hour harvest cycle)
-5. **Comparison with ERC-4626** (Ethereum's equivalent — same concept, different platform)
-6. **What "composability" means** (why SEP-56 shares can be used in other protocols)
+## What needs to be created
 
-## Acceptance criteria
-- [ ] Written for someone who knows what cryptocurrency is but has never used DeFi
-- [ ] Uses at least two non-technical analogies
-- [ ] Includes a simple diagram (ASCII art is fine)
-- [ ] Placed at `docs/guides/sep56-explainer.md`
+A file at `docs/sep-56-explainer.md` covering:
 
-## GrantFox
-Points: 60 | Complexity: 🟢 Beginner — writers and DeFi curious contributors welcome
+1. **What SEP-56 defines** — the standard interface for tokenized vaults on Soroban (deposit assets, receive share tokens, redeem shares for assets + accrued yield).
+2. **Why it exists** — without a standard every vault is a silo; SEP-56 lets any compliant contract recognise and compose with vault shares.
+3. **How it compares to ERC-4626** — same concept, different chain; ERC-4626 has deep DeFi adoption on Ethereum, SEP-56 brings that pattern to Stellar.
+4. **How YieldVault implements it** — yrUSDC shares, auto-compounding via the harvest cycle.
+5. **What composability means in practice** — a SEP-56 share can be accepted as collateral by any other SEP-56-aware contract with zero custom integration.
+
+## What done looks like
+
+- [ ] `docs/sep-56-explainer.md` exists and is readable by a non-technical audience.
+- [ ] Uses at least one real-world analogy to explain tokenized vaults.
+- [ ] Linked from `docs/README.md` so readers can discover it.
+- [ ] Tone matches the existing docs in `docs/`.
+
+## File references
+
+| File | Why it matters |
+|------|---------------|
+| `/.github/profile/README.md` (lines 93-94) | Current SEP-56 mention — assumes prior knowledge |
+| `docs/` | Target directory; check existing style before writing |
+| `docs/README.md` | Add a link to the new explainer here |
