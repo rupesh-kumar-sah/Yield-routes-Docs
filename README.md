@@ -87,6 +87,7 @@ All documents are written in Markdown with embedded Mermaid diagrams for maximum
 |---|---|---|---|---|
 | [`docs/architecture.md`](docs/architecture.md) | Architecture | 60-90 min | Smart contract devs, protocol researchers | Route aggregation math, vault share-price mechanics, fee distribution cycle, TWAP calculation, cron job architecture — the complete "how the numbers work" reference |
 | [`docs/contracts.md`](docs/contracts.md) | API Reference | 45-60 min | Contract integrators, backend devs | Full function-level reference for all four Soroban contracts with parameters, return types, errors, and gas costs. Also summarized in [`yield-routes-contracts/README.md`](https://github.com/YOUR_ORG/yield-routes-contracts#contract-interfaces) |
+| [`docs/api/`](docs/api/README.md) | Backend API Reference | 30-45 min | Frontend devs, integrators | Complete REST API endpoint reference for `pools`, `oracle`, `route`, and `vault` routes including authentication, params, schemas, and curl examples |
 | [`docs/guides/quickstart.md`](docs/guides/quickstart.md) | Tutorial | 30-45 min | New contributors, full-stack devs | End-to-end local setup walkthrough spanning all four code repos — database, backend API, frontend UI, and contract deployment |
 | [`docs/grantfox-application.md`](docs/grantfox-application.md) | Grant Application | 15-20 min | Ecosystem stakeholders, investors | GrantFox funding program application with milestones and deliverables. For broader ecosystem contribution narrative, see the [org homepage](https://github.com/YOUR_ORG/.github/blob/main/profile/README.md#why-this-matters-for-stellar) |
 
@@ -118,8 +119,8 @@ Choose your path based on what you're trying to accomplish:
 **Reading path**:
 1. Start with [org homepage](https://github.com/YOUR_ORG) (15 min) — system architecture
 2. Read [`docs/architecture.md`](docs/architecture.md) **section 4** (20 min) — cron job architecture
-3. Skim [`docs/contracts.md`](docs/contracts.md) **events section** (10 min) — what the indexer listens for
-4. Read [`yield-routes-backend/README.md`](https://github.com/YOUR_ORG/yield-routes-backend) (30 min) — API reference, database schema
+3. Read [`docs/api/`](docs/api/README.md) (25 min) — complete REST API endpoint reference
+4. Skim [`docs/contracts.md`](docs/contracts.md) **events section** (10 min) — what the indexer listens for
 5. Try [`docs/guides/quickstart.md`](docs/guides/quickstart.md) **backend setup section** (20 min) — run the indexer and API locally
 
 **Prerequisites**: Node.js/TypeScript, PostgreSQL, REST API design, basic Stellar knowledge  
@@ -133,8 +134,8 @@ Choose your path based on what you're trying to accomplish:
 **Reading path**:
 1. Start with [org homepage](https://github.com/YOUR_ORG) (15 min) — what YieldRoutes offers
 2. Skim [`docs/architecture.md`](docs/architecture.md) **sections 1-2** (15 min) — enough to understand routes and vaults
-3. Read [`yield-routes-frontend/README.md`](https://github.com/YOUR_ORG/yield-routes-frontend) (30 min) — component architecture, Freighter wallet integration
-4. Read [`yield-routes-backend/README.md`](https://github.com/YOUR_ORG/yield-routes-backend) **API reference** (20 min) — REST endpoints you'll call
+3. Read [`docs/api/`](docs/api/README.md) (20 min) — REST endpoints you'll call (`pools`, `oracle`, `route`, `vault`)
+4. Read [`yield-routes-frontend/README.md`](https://github.com/YOUR_ORG/yield-routes-frontend) (30 min) — component architecture, Freighter wallet integration
 5. Try [`docs/guides/quickstart.md`](docs/guides/quickstart.md) **frontend setup** (15 min) — run the UI locally
 
 **Prerequisites**: React, TypeScript, wallet integration experience (MetaMask/Freighter), REST APIs  
